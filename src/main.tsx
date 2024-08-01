@@ -6,8 +6,13 @@ import "./index.css";
 // import browser router dari react doom
 import { BrowserRouter } from "react-router-dom";
 
+// import auth provide
+import { AuthProvider } from "./context/AuthContext.tsx";
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <AuthProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AuthProvider>
 );
