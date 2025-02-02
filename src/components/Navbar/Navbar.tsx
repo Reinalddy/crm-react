@@ -1,25 +1,36 @@
-import { Link } from "react-router-dom";
+import { 
+  BarChart, 
+  Settings, 
+  Users, 
+  Activity, 
+  Calendar,
+} from 'lucide-react';
 
-export default function Navbar() {
+export function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-      <div className="container">
-        <Link to="/" className="navbar-brand">
-          HOME
-        </Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a href="https://santrikoding.com" target="_blank" className="nav-link active" aria-current="page">
-                SANTRIKODING.COM
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+        <nav className="flex-1 p-4">
+          <div className="space-y-2">
+            <a href="#" className="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg">
+              <BarChart className="w-5 h-5 mr-3" />
+              Dashboard
+            </a>
+            <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+              <Users className="w-5 h-5 mr-3" />
+              Team
+            </a>
+            <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+              <Activity className="w-5 h-5 mr-3" />
+              Projects
+            </a>
+            <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+              <Calendar className="w-5 h-5 mr-3" />
+              Calendar
+            </a>
+            <a href="#" className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
+              <Settings className="w-5 h-5 mr-3" />
+              Settings
+            </a>
+          </div>
+        </nav>
   );
 }
