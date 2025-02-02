@@ -10,7 +10,7 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-blue-600">YourApp</span>
+              <span className="text-2xl font-bold text-blue-600">ReiApp</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-4">
@@ -36,10 +36,10 @@ const HomePage = () => {
               <div className="text-center lg:text-left">
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="block">Welcome to</span>
-                  <span className="block text-blue-600">Your Amazing App</span>
+                  <span className="block text-blue-600">ReiApp</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Transform your workflow with our powerful platform. Get started today and experience the difference.
+                  Smart Wallet to Safely Hold Your Funds.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
@@ -194,7 +194,7 @@ const HomePage = () => {
           </div>
           <div className="mt-8 border-t border-gray-200 pt-8">
             <p className="text-base text-gray-400 text-center">
-              © 2025 YourApp. All rights reserved.
+              © 2025 ReiApp. All rights reserved.
             </p>
           </div>
         </div>

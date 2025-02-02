@@ -1,6 +1,5 @@
 import React from 'react';
-// import {Navbar} from '../../../components/Navbar/Navbar';
-import { Navbar } from "../../../components/Navbar/Navbar";
+import Navbar from "../../../components/Navbar/Navbar";
 import { 
   Bell, 
   Search, 
@@ -10,7 +9,9 @@ import {
   DollarSign, 
   Calendar,
   ChevronDown,
-  Menu
+  Menu,
+  Wallet2Icon,
+  Wallet2,
 } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -39,7 +40,7 @@ const DashboardPage = () => {
       <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg hidden md:block">
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-center h-16 border-b">
-            <span className="text-2xl font-bold text-blue-600">YourApp</span>
+            <span className="text-2xl font-bold text-blue-600">ReiApp</span>
           </div>
           
         {/* navbar */}
@@ -100,23 +101,11 @@ const DashboardPage = () => {
             {/* Stats Cards */}
             <div className="bg-white rounded-lg shadow p-6">
               <div className="flex items-center">
-                <div className="p-3 bg-blue-100 rounded-full">
-                  <Users className="h-6 w-6 text-blue-600" />
-                </div>
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-500">Total Users</p>
-                  <p className="text-2xl font-semibold text-gray-900">1,482</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow p-6">
-              <div className="flex items-center">
                 <div className="p-3 bg-green-100 rounded-full">
-                  <Activity className="h-6 w-6 text-green-600" />
+                  <DollarSign className="h-6 w-6 text-green-600" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-500">Active Projects</p>
+                  <p className="text-sm font-medium text-gray-500">Balance</p>
                   <p className="text-2xl font-semibold text-gray-900">12</p>
                 </div>
               </div>
@@ -125,11 +114,11 @@ const DashboardPage = () => {
             <div className="bg-white rounded-lg shadow p-6">
               <div className="flex items-center">
                 <div className="p-3 bg-yellow-100 rounded-full">
-                  <Calendar className="h-6 w-6 text-yellow-600" />
+                  <Wallet2Icon className="h-6 w-6 text-yellow-600" />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-500">Tasks Today</p>
-                  <p className="text-2xl font-semibold text-gray-900">8</p>
+                  <p className="text-sm font-medium text-gray-500">Wallet Status</p>
+                  <p className="text-2xl font-semibold text-gray-900">Enabled</p>
                 </div>
               </div>
             </div>
@@ -147,43 +136,6 @@ const DashboardPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Chart */}
-            <div className="bg-white rounded-lg shadow p-6">
-              <h2 className="text-lg font-semibold mb-4">Activity Overview</h2>
-              <div className="h-80">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={chartData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Line type="monotone" dataKey="value" stroke="#3B82F6" strokeWidth={2} />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-
-            {/* Recent Activity */}
-            <div className="bg-white rounded-lg shadow p-6">
-              <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
-              <div className="space-y-4">
-                {recentActivities.map((activity) => (
-                  <div key={activity.id} className="flex items-center">
-                    <div className={`w-2 h-2 rounded-full ${
-                      activity.status === 'success' ? 'bg-green-500' :
-                      activity.status === 'pending' ? 'bg-yellow-500' :
-                      'bg-blue-500'
-                    }`} />
-                    <div className="ml-4">
-                      <p className="text-sm font-medium text-gray-900">{activity.action}</p>
-                      <p className="text-sm text-gray-500">{activity.date}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
